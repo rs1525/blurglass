@@ -1,11 +1,12 @@
 plugins {
     id("com.android.library")
+    alias(libs.plugins.kotlin.android)
     id("maven-publish")
 }
 
 android {
     namespace = "com.akustom15.liquidglasslib"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -46,7 +47,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.rs1525"
                 artifactId = "liquidglass"
-                version = "1.0.0"
+                version = "1.0.1"
             }
         }
     }
